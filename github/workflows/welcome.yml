@@ -1,0 +1,26 @@
+name: Welcome New Contributors
+
+on:
+  issues:
+    types: [opened]
+  pull_request:
+    types: [opened]
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/first-interaction@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          issue-message: |
+            👋 Welcome to the JFlat project! Thank you for opening your first issue. 
+            
+            If you're reporting a bug, please ensure you've included steps to reproduce it. If this is a feature request, we'd love to hear your use case! 
+          pr-message: |
+            🎉 Awesome! Thank you for submitting your first Pull Request to JFlat.
+            
+            Before we merge, please make sure your PR follows the guidelines in our `CONTRIBUTING.md` file, and that the CI build passes successfully. A maintainer will review your code soon!
