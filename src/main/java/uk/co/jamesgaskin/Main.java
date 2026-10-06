@@ -1,7 +1,7 @@
 package uk.co.jamesgaskin;
 
 /**
- * Hello world!
+ * Hello world.
  */
 public class Main {
   /**
