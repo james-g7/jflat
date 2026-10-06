@@ -1,0 +1,44 @@
+area/core:
+  - changed-files:
+    - any-glob-to-any-file: 
+      - 'src/main/java/**/core/**'
+      - 'src/main/java/**/automata/**'
+      - 'src/main/java/**/turing/**'
+      - 'src/main/java/**/machine/**'
+
+area/ui:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'src/main/java/**/ui/**'
+      - 'src/main/java/**/gui/**'
+      - 'src/main/java/**/swing/**'
+      - 'src/main/java/**/view/**'
+
+area/serialization:
+  - changed-files:
+    - any-glob-to-any-file:
+      - 'src/main/java/**/io/**'
+      - 'src/main/java/**/json/**'
+      - 'src/main/java/**/serialization/**'
+
+area/tests:
+  - changed-files:
+    - any-glob-to-any-file: 
+      - 'src/test/**'
+
+area/build:
+  - changed-files:
+    - any-glob-to-any-file: 
+      - 'pom.xml'
+      - '.mvn/**'
+
+area/ci:
+  - changed-files:
+    - any-glob-to-any-file: 
+      - '.github/**'
+
+area/docs:
+  - changed-files:
+    - any-glob-to-any-file: 
+      - '*.md'
+      - 'docs/**'
