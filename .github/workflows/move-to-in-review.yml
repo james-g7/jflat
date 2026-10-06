@@ -1,0 +1,26 @@
+name: "Move to In Review"
+
+on:
+  pull_request:
+    types: [opened, ready_for_review, reopened]
+
+jobs:
+  label-in-review:
+    name: Add In Review Label
+    # Only run if the PR is not a draft
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    
+    steps:
+      - name: Apply 'in-review' label
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['in-review']
+            })
